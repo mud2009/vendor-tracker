@@ -10,13 +10,14 @@ namespace VendorTracker.Tests
   {
     string title;
     string description;
-    string price;
+    int price;
     string date;
     [TestInitialize]
     public void Initialize()
     {
       title = "title";
       description = "description";
+      price = 5;
       date = "date";
     }
     [TestMethod]
@@ -28,7 +29,7 @@ namespace VendorTracker.Tests
     [TestMethod]
     public void OrderConstructor_ReturnsName_String()
     {
-      Order newOrder = new Order(title, description, date);
+      Order newOrder = new Order(title, description, price, date);
       string result = newOrder.Title; 
       Assert.AreEqual(title ,result);
     }
