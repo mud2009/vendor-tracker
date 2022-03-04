@@ -11,6 +11,9 @@ namespace VendorTracker.Tests
     string name;
     string description;
     string location;
+    string name2;
+    string description2;
+    string location2;
     public void Dispose()
     {
       Vendor.ClearAll();
@@ -21,6 +24,10 @@ namespace VendorTracker.Tests
       name = "bread store";
       description = "place to buy bread";
       location = "over there";
+      name2 = "other bread store";
+      description2 = "other place to buy bread";
+      location2 = "over there2";
+
     }
     [TestMethod]
     public void VendorConstructor_CreatesInstanceOfVendor_Vendor()
@@ -50,6 +57,15 @@ namespace VendorTracker.Tests
       Vendor newVendor = new Vendor(name, description, location);
       int result = newVendor.Id;
       Assert.AreEqual(1, result);
+    }
+    [TestMethod]
+    public void GetAll_ReturnsAllVendors_VendorList()
+    {
+      Vendor newVendor = new Vendor(name, description, location);
+      Vendor newVendor2 = new Vendor(name2, description2, location2);
+      List <Vendor> vendorList = new List<Vendor> { newVendor, newVendor2 };
+      List<Vendor> result = Vendor.GetAll();
+      CollectionAssert.AreEqual(vendorList, result);
     }
   }
 }
