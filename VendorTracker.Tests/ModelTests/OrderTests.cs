@@ -23,7 +23,7 @@ namespace VendorTracker.Tests
     [TestMethod]
     public void OrderConstructor_CreatesOrderObject_Order()
     {
-      Order newOrder = new Order();
+      Order newOrder = new Order(title, description, price, date);
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
     [TestMethod]
