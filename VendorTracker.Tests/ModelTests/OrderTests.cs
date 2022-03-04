@@ -33,5 +33,14 @@ namespace VendorTracker.Tests
       string result = newOrder.Title; 
       Assert.AreEqual(title ,result);
     }
+    [TestMethod]
+    public void OrderConstructor_SetsName_String()
+    {
+      Order newOrder = new Order(title, description, price, date);
+      string updatedTitle = "title2"; 
+      newOrder.Title = updatedTitle;
+      string result = newOrder.Title;
+      Assert.AreEqual(updatedTitle ,result);
+    }
   }
 }
