@@ -6,7 +6,7 @@ using System;
 namespace VendorTracker.Tests
 {
   [TestClass]
-  public class VendorTests
+  public class OrderTests
   {
   }
 }
