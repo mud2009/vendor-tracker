@@ -6,7 +6,7 @@ using System;
 namespace VendorTracker.Tests
 {
   [TestClass]
-  public class OrderTests
+  public class OrderTests : IDisposable
   {
     string title;
     string description;
@@ -16,6 +16,10 @@ namespace VendorTracker.Tests
     string description2;
     int price2;
     string date2;
+    public void Dispose()
+    {
+      Order.ClearAll();
+    }
     [TestInitialize]
     public void Initialize()
     {
