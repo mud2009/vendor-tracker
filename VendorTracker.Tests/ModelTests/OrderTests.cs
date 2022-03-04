@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using RecordLibrary.Models;
+using VendorTracker.Models;
 using System.Collections.Generic;
 using System;
 
