@@ -27,5 +27,14 @@ namespace VendorTracker.Tests
       string result = newVendor.Name;
       Assert.AreEqual(result, test);
     }
+    [TestMethod]
+    public void VendorConstructor_SetsName_String()
+    {
+      Vendor newVendor = new Vendor(test);
+      string updatedTest = "not bread store";
+      newVendor.Name = updatedTest;
+      string result = newVendor.Name;
+      Assert.AreEqual(result, updatedTest);
+    }
   }
 }
