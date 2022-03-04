@@ -75,5 +75,19 @@ namespace VendorTracker.Tests
       Vendor result = Vendor.Find(2);
       Assert.AreEqual(newVendor2, result);
     }
+    [TestMethod]
+    public void AddOrder_AssociatesOrderWithVendor_OrderList()
+    {
+      string title = "title";
+      string description = "description";
+      int price = 5;
+      string date = "date";
+      Order newOrder = new Order(title, description, price, date);
+      List<Order> orderList = new List<Order> {newOrder};
+      Vendor newVendor = new Vendor(name, description, location);
+      newVendor.AddOrder(newOrder);
+      List<Order> resultList = newVendor.Orders;
+      CollectionAssert.AreEqual(orderList ,resultList);
+    }
   }
 }
