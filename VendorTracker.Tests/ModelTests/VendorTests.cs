@@ -29,7 +29,7 @@ namespace VendorTracker.Tests
     {
       Vendor newVendor = new Vendor(name, description, location);
       string result = newVendor.Name;
-      Assert.AreEqual(result, name);
+      Assert.AreEqual(name, result);
     }
     [TestMethod]
     public void VendorConstructor_SetsName_String()
@@ -38,7 +38,14 @@ namespace VendorTracker.Tests
       string updatedTest = "not bread store";
       newVendor.Name = updatedTest;
       string result = newVendor.Name;
-      Assert.AreEqual(result, updatedTest);
+      Assert.AreEqual(updatedTest, result);
+    }
+    [TestMethod]
+    public void GetId_ReturnsId_Int()
+    {
+      Vendor newVendor = new Vendor(name, description, location);
+      int result = newVendor.Id;
+      Assert.AreEqual(1, result);
     }
   }
 }
