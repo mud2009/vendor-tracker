@@ -5,9 +5,13 @@ namespace VendorTracker.Models
   public class Vendor
   {
     public string Name { get; set;}
-    public Vendor(string name)
+    public string Description { get; set; }
+    public string Location { get; set;}
+    public Vendor(string name, string description, string location)
     {
       Name = name;
+      Description = description;
+      Location = location;
     }
   }
 }
