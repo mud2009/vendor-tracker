@@ -1,6 +1,6 @@
 # Vendor Tracker
 
-#### Site for baker to track vendors and orders
+#### Site for bakers to track vendors and orders
 
 #### By Will Greenberg
 
