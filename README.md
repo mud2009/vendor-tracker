@@ -21,6 +21,7 @@ This site allows bakers to access information on vendors and those vendors' spec
 * Clone this repository to your desktop.
 * Navigate to directory `VendorTracker.Solution` in your terminal.
 * To run the application, run `dotnet run --project VendorTracker/`.
+* Navigate to `http://localhost:5000` in your browser.
 * To run tests on the program, run `dotnet test VendorTracker.Tests`.
 
 ## Known Bugs
