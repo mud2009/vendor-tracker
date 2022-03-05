@@ -1,9 +1,20 @@
+body{
+  background-image: url(../img/bread.png);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  font-family: 'Times New Roman', Times, serif;
+}
+
 .container{
   margin-top: 20vh;
   text-align: center;
-  max-width: 25%; 
+  max-width: 50%; 
 }
 
-/* input { 
-  max-width: 25%; 
-} */
+input { 
+  text-align: center;
+}
+
+a{
+  color: black;
+}
