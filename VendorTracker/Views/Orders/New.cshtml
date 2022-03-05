@@ -5,19 +5,19 @@
 <form action="/vendors/@Model.Id/orders" method="post">
   <div class="form-group">
     <label for="orderTitle">Order title:</label>
-    <input id="orderTitle" name="orderTitle" type="text" class="form-control">
+    <input id="orderTitle" name="orderTitle" type="text" class="form-control" required>
   </div>
   <div class="form-group">
     <label for="orderDesc">Order description:</label>
-    <input id="orderDesc" name="orderDesc" type="text" class="form-control">
+    <input id="orderDesc" name="orderDesc" type="text" class="form-control" required>
   </div>
   <div class="form-group">
     <label for="orderPric">Order price:</label>
-    <input id="orderPric" name="orderPric" type="number" class="form-control">
+    <input id="orderPric" name="orderPric" type="number" class="form-control" required>
   </div>
   <div class="form-group">
     <label for="orderDat">Order date:</label>
-    <input id="orderDat" name="orderDat" type="date" class="form-control">
+    <input id="orderDat" name="orderDat" type="date" class="form-control" required>
     <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
   </div>
   <div class="form-group">
